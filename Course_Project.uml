@@ -3,23 +3,23 @@
   <ID>JAVA</ID>
   <OriginalElement>C:/Users/Алёна/IdeaProjects/Course_Project</OriginalElement>
   <nodes>
-    <node x="0.0" y="236.0">ua.com.khai.Residential</node>
-    <node x="184.0" y="0.0">ua.com.khai.Building</node>
-    <node x="178.0" y="236.0">ua.com.khai.Warehouse</node>
-    <node x="392.0" y="236.0">ua.com.khai.Office</node>
+    <node x="246.0" y="236.0">ua.com.khai.Residential</node>
+    <node x="528.0" y="0.0">ua.com.khai.Building</node>
+    <node x="522.0" y="243.0">ua.com.khai.Warehouse</node>
+    <node x="874.0" y="243.0">ua.com.khai.Office</node>
   </nodes>
   <notes />
   <edges>
     <edge source="ua.com.khai.Office" target="ua.com.khai.Building" relationship="GENERALIZATION">
       <point x="0.0" y="-60.0" />
-      <point x="494.0" y="211.0" />
-      <point x="275.0" y="211.0" />
+      <point x="976.0" y="211.0" />
+      <point x="619.0" y="211.0" />
       <point x="0.0" y="93.0" />
     </edge>
     <edge source="ua.com.khai.Residential" target="ua.com.khai.Building" relationship="GENERALIZATION">
       <point x="0.0" y="-60.0" />
-      <point x="79.0" y="211.0" />
-      <point x="275.0" y="211.0" />
+      <point x="325.0" y="211.0" />
+      <point x="619.0" y="211.0" />
       <point x="0.0" y="93.0" />
     </edge>
     <edge source="ua.com.khai.Warehouse" target="ua.com.khai.Building" relationship="GENERALIZATION">
@@ -27,9 +27,9 @@
       <point x="0.0" y="93.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="298.0" y="178.0" />
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="654.0" y="210.0" />
   <SelectedNodes>
-    <node>ua.com.khai.Warehouse</node>
+    <node>ua.com.khai.Office</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
