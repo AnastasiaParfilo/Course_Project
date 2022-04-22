@@ -8,10 +8,10 @@ public class Office extends Building {
     private Integer numArendators;
     private Integer priceRent;
 
-    private final List<String> listOfArendators=new ArrayList<>();
+    private final List<String> listOfArendators = new ArrayList<>();
 
-    public Integer costOfRent(){
-        return getPriceRent()/numArendators;
+    public Integer costOfRent() {
+        return getPriceRent() / numArendators;
     }
 
 

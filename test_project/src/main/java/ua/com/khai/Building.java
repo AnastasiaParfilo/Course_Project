@@ -9,7 +9,7 @@ public abstract class Building {
     private Integer length;
     private Integer width;
 
-    private List<String> listOfPeople=new ArrayList<>();
+    private List<String> listOfPeople = new ArrayList<>();
     private String name;
     private String lastName;
     private Integer numberOfPeople;
@@ -75,27 +75,27 @@ public abstract class Building {
     }
 
 
-    public Integer areaOfRoom(){
-        Integer area=length*width;
+    public Integer areaOfRoom() {
+        Integer area = length * width;
         return area;
     }
 
-    public Integer perimOfRoom(){
-        Integer perim=length+length+width+width;
+    public Integer perimOfRoom() {
+        Integer perim = length + length + width + width;
         return perim;
     }
 
-    public Integer areaOfBuilding(){
-        Integer area=numberOfRoom*areaOfRoom();
+    public Integer areaOfBuilding() {
+        Integer area = numberOfRoom * areaOfRoom();
         return area;
     }
 
 
-    public void addPeople(){
-        listOfPeople.add(name+" "+lastName);
+    public void addPeople() {
+        listOfPeople.add(name + " " + lastName);
     }
 
-    public List<String> getListOfPeoplePeople(){
+    public List<String> getListOfPeoplePeople() {
         return listOfPeople;
     }
 }

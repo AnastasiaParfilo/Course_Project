@@ -1,6 +1,6 @@
 package ua.com.khai;
 
-public class Residential extends Building{
+public class Residential extends Building {
     private Integer playground;
     private Integer malls;
     private Integer schools;
@@ -38,13 +38,13 @@ public class Residential extends Building{
         this.kindergarten = kindergarten;
     }
 
-    public Integer costOfRent(){
-        return areaOfRoom()*10+playground*3+kindergarten*4+schools*5+malls*2;
+    public Integer costOfRent() {
+        return areaOfRoom() * 10 + playground * 3 + kindergarten * 4 + schools * 5 + malls * 2;
     }
 
     @Override
     public String toString() {
-        return super.toString()+"Residential{" +
+        return super.toString() + "Residential{" +
                 "playground=" + playground +
                 ", malls=" + malls +
                 ", schools=" + schools +

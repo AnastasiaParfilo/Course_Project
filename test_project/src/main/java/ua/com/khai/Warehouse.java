@@ -1,12 +1,12 @@
 package ua.com.khai;
 
-public class Warehouse extends Building{
+public class Warehouse extends Building {
     private Integer boxWithFood;
     private Integer boxWithTools;
     private Integer boxWithAppliances;
     private Double area;
 
-    public boolean hasFreePlace(){
+    public boolean hasFreePlace() {
         Double areaBoxWithFood = 21.8;
         Double areaBoxWithTools = 72.3;
         Double areaBoxWithAppliances = 56.5;
@@ -21,7 +21,7 @@ public class Warehouse extends Building{
         this.area = area;
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return boxWithFood == 0 && boxWithAppliances == 0 && boxWithTools == 0;
     }
 
@@ -47,5 +47,15 @@ public class Warehouse extends Building{
 
     public void setBoxWithTools(Integer boxWithTools) {
         this.boxWithTools = boxWithTools;
+    }
+
+    @Override
+    public String toString() {
+        return "Warehouse{" +
+                "boxWithFood=" + boxWithFood +
+                ", boxWithTools=" + boxWithTools +
+                ", boxWithAppliances=" + boxWithAppliances +
+                ", area=" + area +
+                '}';
     }
 }
