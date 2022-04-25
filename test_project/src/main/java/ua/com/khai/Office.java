@@ -10,11 +10,6 @@ public class Office extends Building {
 
     private final List<String> listOfArendators = new ArrayList<>();
 
-    public Integer costOfRent() {
-        return getPriceRent() / numArendators;
-    }
-
-
     public Integer getPriceRent() {
         return priceRent;
     }
@@ -43,6 +38,11 @@ public class Office extends Building {
 
     public void setNumArendators(Integer numArendators) {
         this.numArendators = numArendators;
+    }
+
+
+    public Integer costOfRent() {
+        return getPriceRent() / numArendators;
     }
 
     @Override

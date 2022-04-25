@@ -62,6 +62,9 @@ public abstract class Building {
         this.numberOfPeople = numberOfPeople;
     }
 
+    public List<String> getListOfPeople() {
+        return listOfPeople;
+    }
     @Override
     public String toString() {
         return "Building{" +
@@ -90,12 +93,8 @@ public abstract class Building {
         return area;
     }
 
-
     public void addPeople() {
         listOfPeople.add(name + " " + lastName);
     }
-
-    public List<String> getListOfPeoplePeople() {
-        return listOfPeople;
-    }
 }
+
