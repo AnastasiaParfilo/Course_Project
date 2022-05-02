@@ -93,7 +93,7 @@ public abstract class Building {
         return area;
     }
 
-    public void addPeople() {
+    public void addPeople(String name, String lastName) {
         listOfPeople.add(name + " " + lastName);
     }
 }
