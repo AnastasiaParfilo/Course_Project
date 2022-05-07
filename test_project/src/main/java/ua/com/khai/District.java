@@ -13,9 +13,9 @@ import java.util.stream.Collectors;
 public class District {
 
     List<Building> districtList = new ArrayList<>();
-
+    Scanner sc=new Scanner(System.in);
     public void create(){
-        Scanner sc=new Scanner(System.in);
+
         int i = 3;
         int j=2;
         while (i != 0) {
@@ -29,7 +29,7 @@ public class District {
             i = sc.nextInt();
             switch (i) {
                 case 1 -> {
-                    //ТУТ РАНДОМНОЕ ИЛИ ИЗ ФАЙЛА ЗАПОЛНЕНИЕ
+
                     Office office =new Office();
                     System.out.println("If you want to fill fields in random way, enter 1");
                     System.out.println("If you want to fill fields from file, enter 2");
@@ -42,7 +42,7 @@ public class District {
                     System.out.println("Office was added");
                 }
                 case 2 -> {
-                    //ТУТ РАНДОМНОЕ ИЛИ ИЗ ФАЙЛА ЗАПОЛНЕНИЕ
+
                     Residential residential = new Residential();
                     System.out.println("If you want to fill fields in random way, enter 1");
                     System.out.println("If you want to fill fields from file, enter 2");
@@ -56,7 +56,7 @@ public class District {
                     System.out.println("Residential was added");
                 }
                 case 3 -> {
-                    //ТУТ РАНДОМНОЕ ИЛИ ИЗ ФАЙЛА ЗАПОЛНЕНИЕ
+
                     Warehouse warehouse = new Warehouse();
                     System.out.println("If you want to fill fields in random way, enter 1 ");
                     System.out.println("If you want to fill fields from file, enter 2 ");
@@ -80,6 +80,9 @@ public class District {
     }
 
     public void remove(Building building){
+        System.out.println();
+        System.out.println("Please, choose name of building to delete");
+
         districtList.remove(building);
     }
     public List<Building> getOffice(){
