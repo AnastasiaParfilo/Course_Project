@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Office extends Building {
     private String companyArendator;
-    private Integer numArendators=0;
-    private Integer priceRent=0;
+    private Integer numArendators = 0;
+    private Integer priceRent = 0;
 
     private final List<String> listOfArendators = new ArrayList<>();
 

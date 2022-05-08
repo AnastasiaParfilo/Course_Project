@@ -13,11 +13,12 @@ import java.util.stream.Collectors;
 public class District {
 
     List<Building> districtList = new ArrayList<>();
-    Scanner sc=new Scanner(System.in);
-    public void create(){
+    Scanner sc = new Scanner(System.in);
+
+    public void create() {
 
         int i = 3;
-        int j=2;
+        int j = 2;
         while (i != 0) {
             System.out.println();
             System.out.println("Please choose some building to add");
@@ -30,13 +31,13 @@ public class District {
             switch (i) {
                 case 1 -> {
 
-                    Office office =new Office();
+                    Office office = new Office();
                     System.out.println("If you want to fill fields in random way, enter 1");
                     System.out.println("If you want to fill fields from file, enter 2");
-                    j=sc.nextInt();
-                    if(j==1) {
+                    j = sc.nextInt();
+                    if (j == 1) {
                         randomOffice(office);
-                    }else if(j==2){
+                    } else if (j == 2) {
                         fileOffice(office);
                     }
                     System.out.println("Office was added");
@@ -46,10 +47,10 @@ public class District {
                     Residential residential = new Residential();
                     System.out.println("If you want to fill fields in random way, enter 1");
                     System.out.println("If you want to fill fields from file, enter 2");
-                    j=sc.nextInt();
-                    if(j==1) {
+                    j = sc.nextInt();
+                    if (j == 1) {
                         randomResidential(residential);
-                    }else if(j==2) {
+                    } else if (j == 2) {
                         fileResidential(residential);
 
                     }
@@ -60,10 +61,10 @@ public class District {
                     Warehouse warehouse = new Warehouse();
                     System.out.println("If you want to fill fields in random way, enter 1 ");
                     System.out.println("If you want to fill fields from file, enter 2 ");
-                    j=sc.nextInt();
-                    if(j==1) {
+                    j = sc.nextInt();
+                    if (j == 1) {
                         randomWarehouse(warehouse);
-                    }else if(j==2) {
+                    } else if (j == 2) {
                         fileWarehouse(warehouse);
                     }
                     System.out.println("Warehouse was added");
@@ -72,118 +73,124 @@ public class District {
             }
         }
     }
-    public void delete(){
+
+    public void delete() {
         districtList.clear();
     }
-    public void add(Building building){
+
+    public void add(Building building) {
         districtList.add(building);
     }
 
-    public void remove(Building building){
+    public void remove(Building building) {
         System.out.println();
         System.out.println("Please, choose name of building to delete");
 
         districtList.remove(building);
     }
-    public List<Building> getOffice(){
+
+    public List<Building> getOffice() {
         return districtList.stream().filter(p -> p.getClass().equals(Office.class)).collect(Collectors.toList());
     }
-    public List<Building> getResidential(){
+
+    public List<Building> getResidential() {
         return districtList.stream().filter(p -> p.getClass().equals(Residential.class)).collect(Collectors.toList());
     }
-    public List<Building> getWarehouse(){
+
+    public List<Building> getWarehouse() {
         return districtList.stream().filter(p -> p.getClass().equals(Warehouse.class)).collect(Collectors.toList());
     }
-    public List<Building> show(){
+
+    public List<Building> show() {
         return districtList;
     }
 
-    public void randomOffice(Office office){
-        String [] arrendators={"Sony Pictures","Apple","NIX","Epam","A-Level","Samsung","Asus","HP","Space-X","LG"};
+    public void randomOffice(Office office) {
+        String[] arrendators = {"Sony Pictures", "Apple", "NIX", "Epam", "A-Level", "Samsung", "Asus", "HP", "Space-X", "LG"};
         Random random = new Random();
-        int n = random.nextInt(0,arrendators.length);
+        int n = random.nextInt(0, arrendators.length);
         office.setCompanyArendator(arrendators[n]);
-        n=random.nextInt(1,10);
+        n = random.nextInt(1, 10);
         office.setNumArendators(n);
-        n=random.nextInt(300,700);
+        n = random.nextInt(300, 700);
         office.setPriceRent(n);
-        n=random.nextInt(200,900);
+        n = random.nextInt(200, 900);
         office.setNumberOfRoom(n);
-        n=random.nextInt(40,200);
+        n = random.nextInt(40, 200);
         office.setLength(n);
-        n=random.nextInt(40,200);
+        n = random.nextInt(40, 200);
         office.setWidth(n);
         add(office);
 
     }
 
-    public void randomResidential(Residential residential){
+    public void randomResidential(Residential residential) {
         Random random = new Random();
-        int n = random.nextInt(200,900);
+        int n = random.nextInt(200, 900);
         residential.setNumberOfRoom(n);
-        n = random.nextInt(2,13);
+        n = random.nextInt(2, 13);
         residential.setKindergarten(n);
-        n = random.nextInt(1,6);
+        n = random.nextInt(1, 6);
         residential.setMalls(n);
-        n = random.nextInt(2,9);
+        n = random.nextInt(2, 9);
         residential.setPlayground(n);
-        n = random.nextInt(1,3);
+        n = random.nextInt(1, 3);
         residential.setSchools(n);
-        n=random.nextInt(40,200);
+        n = random.nextInt(40, 200);
         residential.setLength(n);
-        n=random.nextInt(40,200);
+        n = random.nextInt(40, 200);
         residential.setWidth(n);
         add(residential);
     }
 
-    public void randomWarehouse(Warehouse warehouse){
+    public void randomWarehouse(Warehouse warehouse) {
         Random random = new Random();
-        int n = random.nextInt(200,900);
+        int n = random.nextInt(200, 900);
         warehouse.setNumberOfRoom(n);
-        n = random.nextInt(2,11);
+        n = random.nextInt(2, 11);
         warehouse.setBoxWithAppliances(n);
-        n = random.nextInt(100,300);
-        warehouse.setArea((double)n);
-        n = random.nextInt(1,7);
+        n = random.nextInt(100, 300);
+        warehouse.setArea((double) n);
+        n = random.nextInt(1, 7);
         warehouse.setBoxWithFood(n);
-        n = random.nextInt(1,10);
+        n = random.nextInt(1, 10);
         warehouse.setBoxWithTools(n);
-        n=random.nextInt(40,200);
+        n = random.nextInt(40, 200);
         warehouse.setLength(n);
-        n=random.nextInt(40,200);
+        n = random.nextInt(40, 200);
         warehouse.setWidth(n);
         add(warehouse);
     }
 
-    public void fileOffice(Office office){
-        String [] arrendators={"Sony Pictures","Apple","NIX","Epam","A-Level","Samsung","Asus","HP","Space-X","LG"};
-       try (FileReader fileReader = new FileReader("test_project/src/main/java/ua/com/khai/office.txt")){
-           BufferedReader bufferedReader = new BufferedReader(fileReader);
-           String c;
-           List<Integer> listNum=new ArrayList<Integer>();
-           while((c = bufferedReader.readLine()) != null){
-               listNum.add(Integer.valueOf(c));
-           }
-           office.setCompanyArendator(arrendators[listNum.get(0)]);
-           office.setNumArendators(listNum.get(1));
-           office.setPriceRent(listNum.get(2));
-           office.setNumberOfRoom(listNum.get(3));
-           office.setLength(listNum.get(4));
-           office.setWidth(listNum.get(5));
-           add(office);
-       } catch (FileNotFoundException e) {
-           System.out.println(e.getMessage());
-       } catch (IOException e) {
-           System.out.println(e.getMessage());
-       }
-    }
-
-    public void fileResidential(Residential residential){
-        try (FileReader fileReader = new FileReader("test_project/src/main/java/ua/com/khai/residential.txt")){
+    public void fileOffice(Office office) {
+        String[] arrendators = {"Sony Pictures", "Apple", "NIX", "Epam", "A-Level", "Samsung", "Asus", "HP", "Space-X", "LG"};
+        try (FileReader fileReader = new FileReader("test_project/src/main/java/ua/com/khai/office.txt")) {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String c;
-            List<Integer> listNum=new ArrayList<Integer>();
-            while((c = bufferedReader.readLine()) != null){
+            List<Integer> listNum = new ArrayList<Integer>();
+            while ((c = bufferedReader.readLine()) != null) {
+                listNum.add(Integer.valueOf(c));
+            }
+            office.setCompanyArendator(arrendators[listNum.get(0)]);
+            office.setNumArendators(listNum.get(1));
+            office.setPriceRent(listNum.get(2));
+            office.setNumberOfRoom(listNum.get(3));
+            office.setLength(listNum.get(4));
+            office.setWidth(listNum.get(5));
+            add(office);
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void fileResidential(Residential residential) {
+        try (FileReader fileReader = new FileReader("test_project/src/main/java/ua/com/khai/residential.txt")) {
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String c;
+            List<Integer> listNum = new ArrayList<Integer>();
+            while ((c = bufferedReader.readLine()) != null) {
                 listNum.add(Integer.valueOf(c));
             }
             residential.setNumberOfRoom(listNum.get(0));
@@ -201,17 +208,17 @@ public class District {
         }
     }
 
-    public void fileWarehouse(Warehouse warehouse){
-        try (FileReader fileReader = new FileReader("test_project/src/main/java/ua/com/khai/warehouse.txt")){
+    public void fileWarehouse(Warehouse warehouse) {
+        try (FileReader fileReader = new FileReader("test_project/src/main/java/ua/com/khai/warehouse.txt")) {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String c;
-            List<Integer> listNum=new ArrayList<Integer>();
-            while((c = bufferedReader.readLine()) != null){
+            List<Integer> listNum = new ArrayList<Integer>();
+            while ((c = bufferedReader.readLine()) != null) {
                 listNum.add(Integer.valueOf(c));
             }
             warehouse.setNumberOfRoom(listNum.get(0));
             warehouse.setBoxWithAppliances(listNum.get(1));
-            warehouse.setArea((double)listNum.get(2));
+            warehouse.setArea((double) listNum.get(2));
             warehouse.setBoxWithFood(listNum.get(3));
             warehouse.setBoxWithTools(listNum.get(4));
             warehouse.setLength(listNum.get(5));
@@ -219,13 +226,12 @@ public class District {
             add(warehouse);
 
 
-    } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
-
 
 
 }

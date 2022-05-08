@@ -16,22 +16,17 @@ public class Main {
             System.out.println("If you want to show Office buildings in district, enter 4");
             System.out.println("If you want to show Residential buildings in district, enter 5");
             System.out.println("If you want to show Warehouse buildings in district, enter 6");
-            System.out.println();
             System.out.println("If you want to exit, enter 0");
             int i = sc.nextInt();
             switch (i) {
                 case 1 -> district.create();
                 case 2 -> district.delete();
                 case 3 -> System.out.println(district.show());
-                case 4 -> district.getOffice();
-                case 5 -> district.getResidential();
-                case 6 -> district.getWarehouse();
+                case 4 -> System.out.println(district.getOffice());
+                case 5 -> System.out.println(district.getResidential());
+                case 6 -> System.out.println(district.getWarehouse());
                 case 0 -> System.exit(0);
             }
-
-            System.out.println();
-
         }
-
     }
 }

@@ -65,6 +65,7 @@ public abstract class Building {
     public List<String> getListOfPeople() {
         return listOfPeople;
     }
+
     @Override
     public String toString() {
         return "Building{" +
